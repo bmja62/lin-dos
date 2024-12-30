@@ -26,7 +26,10 @@ Ready to dive in? Here’s how to get Lin-DOS up and running:
 git clone https://github.com/bmja62/lin-dos.git
 
 cd lin-dos
-./install.sh
+
+chmod +x SETUP.EXE
+
+./SETUP.EXE
 ```
 
 That’s it! You’re ready to rock and roll with your new, familiar commands.
