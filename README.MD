@@ -1,6 +1,6 @@
 # Welcome to Lin-DOS 🚀
 
-Hello there! If you’ve spent ages in the comfy realms of Windows command line and are now facing the intriguing world of Linux, Lin-DOS is here to save your day—or at least make it a heck of a lot easier!
+Hello there! If you’ve spent ages in the comfy realms of Windows command line and are now facing the intriguing world of Linux, Lin-DOS is here to save your day or at least make it a heck of a lot easier!
 
 ## Why Lin-DOS?
 
