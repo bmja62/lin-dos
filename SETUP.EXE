@@ -1,1 +1,11 @@
-echo "source $(pwd)/AUTOEXEC.BAT" >> ~/.bashrc
+#!/bin/bash
+
+CMD="source $(pwd)/AUTOEXEC.BAT"
+BASHRC_FILE="$HOME/.bashrc"
+
+if ! grep -qxF "$CMD" "$BASHRC_FILE"; then
+    echo "$CMD" >> "$BASHRC_FILE"
+    echo "AUTOEXEC command added to $BASHRC_FILE."
+else
+    echo "AUTOEXEC command already exists in $BASHRC_FILE. Skipping."
+fi
