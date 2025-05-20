@@ -15,7 +15,6 @@ The current implementation is focused on supporting **Windows CMD functionality 
 
 ## 🧾 Available Commands
 
-Here's a list of Windows-style commands that LIN-DOS currently supports and their Linux equivalents behind the scenes:
 
 | Windows Command | What It Does         | Implementation        |
 | --------------- | -------------------- | ----------------------|
