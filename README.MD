@@ -23,9 +23,10 @@ It's a work in progress, and the goal is to make it as comprehensive and helpful
 Ready to dive in? Here’s how to get LIN-DOS up and running:
 
 ```bash
-mkdir ~/src/lin-dos
-git clone git@github.com:bmja62/lin-dos.git ~/src/lin-dos || echo
-cd ~/src/lin-dos
+tfolder=~/src/bmja62/lin-dos/
+mkdir -p $tfolder
+git clone git@github.com:bmja62/lin-dos.git $tfolder || echo
+cd $tfolder
 ./SETUP.EXE
 ```
 
