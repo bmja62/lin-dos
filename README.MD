@@ -26,7 +26,6 @@ Ready to dive in? Here’s how to get LIN-DOS up and running:
 mkdir ~/src/lin-dos
 git clone git@github.com:bmja62/lin-dos.git ~/src/lin-dos || echo
 cd ~/src/lin-dos
-chmod +x SETUP.EXE
 ./SETUP.EXE
 ```
 
