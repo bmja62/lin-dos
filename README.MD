@@ -11,23 +11,23 @@ That’s what switching from Windows to Linux can feel like. Scary, right? LIN-D
 
 This repo is just getting started, and we plan to keep adding more commands and features gradually.
 It's a work in progress, and the goal is to make it as comprehensive and helpful as possible. Stay tuned for updates and feel free to contribute your expertise!
-
-## Features
-
-* **Speak Fluent Windows-ish in Linux**: Use your familiar Windows commands right here in Linux.
-* **Scripts Galore**: Where a simple alias won’t do, we’ve scripted out the full experience. It’s like having a backstage pass to your favorite concert!
-* **Docs & Tips**: Ever wonder what the Linux equivalent of `dir` is? Wonder no more! Our docs got you covered.
-* **Plug & Play Installation**: Get everything set up with just a couple of clicks. Okay, maybe a couple more than two, but it’s super easy!
+The current implementation is focused on supporting **Windows CMD functionality on Ubuntu**.
 
 ## 🧾 Available Commands
 
 Here's a list of Windows-style commands that LIN-DOS currently supports and their Linux equivalents behind the scenes:
 
-| Windows Command | What It Does         | Linux Equivalent             |
-| --------------- | -------------------- | ---------------------------- |
-| `cls`           | Clear screen         | `clear`                      |
+| Windows Command | What It Does         | Implementation        |
+| --------------- | -------------------- | ----------------------|
+| `cls`           | Clear screen         | full                  |
+| `ver`           | os version           | full                  |
+| `time`          | set and get time     | full                  |
+| `date`          | set and get date     | full                  |
+| `type`          | show text file       | full                  |
+| `copy`          | copy files           | partially             |
 
-> ⚡ More commands are on the way! Want to see your favorite Windows command here? [Contribute](#join-the-party)!
+
+
 
 ## Get Started in No Time!
 
