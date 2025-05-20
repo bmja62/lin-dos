@@ -1,4 +1,7 @@
-echo "Starting Lin-DOS..."
+echo
+echo "Starting LIN-DOS..."
+echo 
+echo 
 
 function CLS() {
 	clear
