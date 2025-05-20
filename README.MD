@@ -23,7 +23,7 @@ It's a work in progress, and the goal is to make it as comprehensive and helpful
 Ready to dive in? Here’s how to get Lin-DOS up and running:
 
 ```bash
-git clone git@github.com:bmja62/lin-dos.git
+git clone git@github.com:bmja62/lin-dos.git ~/src/
 
 cd lin-dos
 
