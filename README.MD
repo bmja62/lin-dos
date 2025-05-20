@@ -1,11 +1,11 @@
-# Welcome to Lin-DOS 🚀
+# Welcome to LIN-DOS 🚀
 
-Hello there! If you’ve spent ages in the comfy realms of Windows command line and are now facing the intriguing world of Linux, Lin-DOS is here to save your day or at least make it a heck of a lot easier!
+Hello there! If you’ve spent ages in the comfy realms of Windows command line and are now facing the intriguing world of Linux, LIN-DOS is here to save your day or at least make it a heck of a lot easier!
 
-## Why Lin-DOS?
+## Why LIN-DOS?
 
 Imagine you've been speaking English all your life and suddenly you need to order your coffee in Martian (okay, not Martian, but you get the drift). 
-That’s what switching from Windows to Linux can feel like. Scary, right? Lin-DOS is like your personal translator from Windows CLI to Linux CLI. It’s here to make sure you don’t miss your command line coffee!
+That’s what switching from Windows to Linux can feel like. Scary, right? LIN-DOS is like your personal translator from Windows CLI to Linux CLI. It’s here to make sure you don’t miss your command line coffee!
 
 ## What's Cooking?
 This repo is just getting started, and we plan to keep adding more commands and features gradually. 
@@ -20,7 +20,7 @@ It's a work in progress, and the goal is to make it as comprehensive and helpful
 
 ## Get Started in No Time!
 
-Ready to dive in? Here’s how to get Lin-DOS up and running:
+Ready to dive in? Here’s how to get LIN-DOS up and running:
 
 ```bash
 mkdir ~/src/lin-dos
@@ -41,7 +41,7 @@ Got an idea? A brilliant command translation that we missed? Jump in!
 
 ## License
 
-Feel free to use and spread Lin-DOS as you like! It’s all yours under the MIT License. Check out the [LICENSE](LICENSE) file for more info.
+Feel free to use and spread LIN-DOS as you like! It’s all yours under the MIT License. Check out the [LICENSE](LICENSE) file for more info.
 
 ## Shoutouts
 
