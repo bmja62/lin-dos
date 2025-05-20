@@ -4,19 +4,30 @@ Hello there! If you’ve spent ages in the comfy realms of Windows command line 
 
 ## Why LIN-DOS?
 
-Imagine you've been speaking English all your life and suddenly you need to order your coffee in Martian (okay, not Martian, but you get the drift). 
+Imagine you've been speaking English all your life and suddenly you need to order your coffee in Martian (okay, not Martian, but you get the drift).
 That’s what switching from Windows to Linux can feel like. Scary, right? LIN-DOS is like your personal translator from Windows CLI to Linux CLI. It’s here to make sure you don’t miss your command line coffee!
 
 ## What's Cooking?
-This repo is just getting started, and we plan to keep adding more commands and features gradually. 
+
+This repo is just getting started, and we plan to keep adding more commands and features gradually.
 It's a work in progress, and the goal is to make it as comprehensive and helpful as possible. Stay tuned for updates and feel free to contribute your expertise!
 
 ## Features
 
-- **Speak Fluent Windows-ish in Linux**: Use your familiar Windows commands right here in Linux.
-- **Scripts Galore**: Where a simple alias won’t do, we’ve scripted out the full experience. It’s like having a backstage pass to your favorite concert!
-- **Docs & Tips**: Ever wonder what the Linux equivalent of `dir` is? Wonder no more! Our docs got you covered.
-- **Plug & Play Installation**: Get everything set up with just a couple of clicks. Okay, maybe a couple more than two, but it’s super easy!
+* **Speak Fluent Windows-ish in Linux**: Use your familiar Windows commands right here in Linux.
+* **Scripts Galore**: Where a simple alias won’t do, we’ve scripted out the full experience. It’s like having a backstage pass to your favorite concert!
+* **Docs & Tips**: Ever wonder what the Linux equivalent of `dir` is? Wonder no more! Our docs got you covered.
+* **Plug & Play Installation**: Get everything set up with just a couple of clicks. Okay, maybe a couple more than two, but it’s super easy!
+
+## 🧾 Available Commands
+
+Here's a list of Windows-style commands that LIN-DOS currently supports and their Linux equivalents behind the scenes:
+
+| Windows Command | What It Does         | Linux Equivalent             |
+| --------------- | -------------------- | ---------------------------- |
+| `cls`           | Clear screen         | `clear`                      |
+
+> ⚡ More commands are on the way! Want to see your favorite Windows command here? [Contribute](#join-the-party)!
 
 ## Get Started in No Time!
 
@@ -36,8 +47,8 @@ That’s it! You’re ready to rock and roll with your new, familiar commands.
 
 Got an idea? A brilliant command translation that we missed? Jump in!
 
-- **Fork it**: Got a fix or a feature? Fork the repo, dive in, and hit us up with that pull request.
-- **Issue Tracker**: Found a bug? Got a suggestion? Drop it like it’s hot in our issue tracker.
+* **Fork it**: Got a fix or a feature? Fork the repo, dive in, and hit us up with that pull request.
+* **Issue Tracker**: Found a bug? Got a suggestion? Drop it like it’s hot in our issue tracker.
 
 ## License
 
@@ -45,5 +56,5 @@ Feel free to use and spread LIN-DOS as you like! It’s all yours under the MIT 
 
 ## Shoutouts
 
-- Big thanks to all the brave souls switching from Windows to Linux. We salute you!
-- Shoutout to the open-source community—couldn’t do it without you!
+* Big thanks to all the brave souls switching from Windows to Linux. We salute you!
+* Shoutout to the open-source community—couldn’t do it without you!
