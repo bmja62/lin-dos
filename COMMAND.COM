@@ -56,13 +56,8 @@ function VER() {
 	    echo "Displays the Linux version."
 	    echo ""
 	    echo "VER"
-	    echo ""
-	    echo "Just like in Windows, this shows the OS version. Welcome to LIN-DOS!"
-	    exit 0
 	fi
-	echo "Bash version: $BASH_VERSION"
-	echo "Linux Information:"
-	uname -a
+	cat /etc/os-release | grep PRETTY_NAME | cut -d= -f2 | tr -d '"'
 }
 
 function TYPE() {
