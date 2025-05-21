@@ -4,7 +4,26 @@ echo
 echo 
 
 function CLS() {
-	clear
+	if [[ "$1" == "/?" ]]; then
+	    echo "Clears the screen."
+	    echo 
+	    echo "CLS"
+	    echo
+	else 
+	    clear
+	fi	
+
+}
+
+function VER() {
+	if [[ "$1" == "/?" ]]; then
+	    echo "Displays the Linux version."
+	    echo 
+	    echo "VER"
+	    echo 
+	else 
+	    cat /etc/os-release | grep PRETTY_NAME | cut -d= -f2 | tr -d '"'
+	fi
 }
 
 function RD() {
@@ -49,15 +68,6 @@ function COPY() {
     else
         echo "Invalid command. Usage: copy con <filename>"
     fi
-}
-
-function VER() {
-	if [[ "$1" == "/?" ]]; then
-	    echo "Displays the Linux version."
-	    echo ""
-	    echo "VER"
-	fi
-	cat /etc/os-release | grep PRETTY_NAME | cut -d= -f2 | tr -d '"'
 }
 
 function TYPE() {
