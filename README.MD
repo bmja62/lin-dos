@@ -56,4 +56,4 @@ Feel free to use and spread LIN-DOS as you like! It’s all yours under the MIT 
 ## Shoutouts
 
 * Big thanks to all the brave souls switching from Windows to Linux. We salute you!
-* Shoutout to the open-source community—couldn’t do it without you!
+* Shoutout to the open-source community, couldn’t do it without you!
