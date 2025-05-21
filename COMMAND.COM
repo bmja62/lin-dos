@@ -44,14 +44,31 @@ function TYPE() {
         return 1
     fi
 
-    if [ ! -f "$1" ]; then
+    shopt -s nullglob
+    local files=$(echo "$1")
+    shopt -u nullglob
+    local count=${#files[@]}
+
+    if [[ $count -eq 0 ]]; then
         echo "The system cannot find the file specified."
 	echo
         return 1
     fi
 
-    cat "$1"
-    echo
+    if [[ $count -eq 1 ]]; then
+       cat "$1"
+       echo
+       return 0
+    fi 
+
+     if [[ $count -gt 1 ]]; then
+        for file in "${files[@]}"; do
+            echo
+            echo "$file"
+            echo
+            cat "$file"
+        done
+     fi
 }
 
 function RD() {
