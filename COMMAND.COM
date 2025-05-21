@@ -28,6 +28,19 @@ function VER() {
   fi
 }
 
+function TYPE() {
+    if [ -z "$1" ]; then
+        echo "The syntax of the command is incorrect."
+        return 1
+    fi
+    if [ ! -f "$1" ]; then
+        echo "The system cannot find the file specified."
+        return 1
+    fi
+    cat "$1"
+    echo
+}
+
 function RD() {
     if [ -z "$1" ]; then
         echo "Usage: rd directory_name"
@@ -70,22 +83,6 @@ function COPY() {
     else
         echo "Invalid command. Usage: copy con <filename>"
     fi
-}
-
-function TYPE() {
-    if [ -z "$1" ]; then
-        echo "Usage: Type filename"
-        return 1
-    fi
-
-    local filename="$1"
-
-    if [ ! -f "$filename" ]; then
-        echo "Error: '$filename' does not exist."
-        return 1
-    fi
-
-    cat "$filename"
 }
 
 
