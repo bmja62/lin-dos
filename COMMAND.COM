@@ -16,14 +16,16 @@ function CLS() {
 }
 
 function VER() {
-	if [[ "$1" == "/?" ]]; then
-	    echo "Displays the Linux version."
-	    echo 
-	    echo "VER"
-	    echo 
-	else 
-	    cat /etc/os-release | grep PRETTY_NAME | cut -d= -f2 | tr -d '"'
-	fi
+  if [[ "$1" == "/?" ]]; then
+    echo "Displays the Linux version."
+    echo 
+    echo "VER"
+    echo 
+  else 
+    echo
+    cat /etc/os-release | grep PRETTY_NAME | cut -d= -f2 | tr -d '"'
+    echo 
+  fi
 }
 
 function RD() {
