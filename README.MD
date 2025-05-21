@@ -15,15 +15,16 @@ The current implementation is focused on supporting **Windows CMD functionality 
 
 ## 🧾 Available Commands
 
-
-| Windows Command | What It Does         | Implementation        |
-| --------------- | -------------------- | ----------------------|
-| `cls`           | Clear screen         | full                  |
-| `ver`           | os version           | full                  |
-| `time`          | set and get time     | full                  |
-| `date`          | set and get date     | full                  |
-| `type`          | show text file       | full                  |
-| `copy`          | copy files           | partially             |
+| **Windows Command** | **What It Does**                 | **Implementation** |
+| ------------------- | -------------------------------- | ------------------ |
+| `cls`               | Clear screen                     | Full               |
+| `rd`                | Remove directory (if empty)      | Partial            |
+| `tree`              | Display directory tree structure | Partial            |
+| `copy con`          | Create file from console input   | Partial            |
+| `ver`               | Display OS version               | Partial            |
+| `type`              | Display contents of a file       | Partial            |
+| `md`                | Make directory                   | Partial            |
+| `cd`                | Change directory / print cwd     | Partial            |
 
 
 
