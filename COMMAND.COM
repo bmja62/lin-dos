@@ -9,10 +9,9 @@ function CLS() {
 	    echo 
 	    echo "CLS"
 	    echo
-	else 
-	    clear
-	fi	
+	fi 
 
+	clear
 }
 
 function VER() {
@@ -21,22 +20,33 @@ function VER() {
     echo 
     echo "VER"
     echo 
-  else 
+  fi
+
     echo
     cat /etc/os-release | grep PRETTY_NAME | cut -d= -f2 | tr -d '"'
     echo 
-  fi
 }
 
 function TYPE() {
+    if [[ "$1" == "/?" ]]; then
+	    echo "Displays the contents of a text file or files."
+	    echo 
+	    echo "TYPE [path]filename"
+	    echo 
+    fi
+
     if [ -z "$1" ]; then
         echo "The syntax of the command is incorrect."
+	echo
         return 1
     fi
+
     if [ ! -f "$1" ]; then
         echo "The system cannot find the file specified."
+	echo
         return 1
     fi
+
     cat "$1"
     echo
 }
