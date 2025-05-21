@@ -9,6 +9,7 @@ function CLS() {
 	    echo 
 	    echo "CLS"
 	    echo
+	    return 0
 	fi 
 
 	clear
@@ -19,7 +20,8 @@ function VER() {
     echo "Displays the Linux version."
     echo 
     echo "VER"
-    echo 
+    echo
+    return 0
   fi
 
     echo
@@ -32,7 +34,8 @@ function TYPE() {
 	    echo "Displays the contents of a text file or files."
 	    echo 
 	    echo "TYPE [path]filename"
-	    echo 
+	    echo
+	    return 0
     fi
 
     if [ -z "$1" ]; then
