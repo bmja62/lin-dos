@@ -45,7 +45,7 @@ function TYPE() {
     fi
 
     shopt -s nullglob
-    local files=$(echo "$1")
+    local files=(echo "$1")
     shopt -u nullglob
     local count=${#files[@]}
 
