@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ./commands/date/date.sh
+source ./date/date.sh
 
 assert_match() {
     local output="$1"

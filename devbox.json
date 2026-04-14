@@ -12,7 +12,7 @@
       "test": [
         "set -euo pipefail",
         "ran=0",
-        "for test_file in ./commands/*/*-test.sh; do",
+        "for test_file in ./*/*-test.sh; do",
         "  if [ -s \"$test_file\" ]; then",
         "    echo \"Running $test_file\"",
         "    bash \"$test_file\"",

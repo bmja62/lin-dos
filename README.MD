@@ -31,52 +31,21 @@ The current implementation is focused on supporting **Windows CMD functionality 
 
 
 
-## Installation (APT/Debian Package)
+## Installation
 
-LIN-DOS is now packaged for Debian/Ubuntu systems.
-
-Build a `.deb` package from source:
+Install LIN-DOS with one command:
 
 ```bash
-sudo apt update
-sudo apt install -y build-essential devscripts debhelper
-dpkg-buildpackage -us -uc
+curl -fsSL https://raw.githubusercontent.com/bmja62/lin-dos/main/install.sh | bash
 ```
 
-Install the generated package:
+This installer downloads the latest source, installs it under
+`~/.local/share/lin-dos`, and appends the LIN-DOS loader to `~/.bashrc`.
+
+Then load commands in your current shell:
 
 ```bash
-sudo apt install ../lin-dos_0.1.0-1_all.deb
-```
-
-After installation, open a new shell session (or run `source /etc/profile.d/lin-dos.sh`)
-to load LIN-DOS commands.
-
-## APT Publish Pipeline
-
-This repository includes a GitHub Actions pipeline at `.github/workflows/publish-apt.yml`
-that builds and publishes an APT repository to the `gh-pages` branch.
-
-Trigger options:
-
-- push a tag like `v0.1.0`
-- run the workflow manually from GitHub Actions
-
-Required repository secrets:
-
-- `APT_GPG_PRIVATE_KEY`: ASCII-armored private key used to sign repository metadata
-- `APT_GPG_KEY_ID`: key ID or fingerprint for the signing key
-
-A separate validation workflow at `.github/workflows/validate-package.yml`
-builds the Debian package on pull requests and pushes to `main` without publishing.
-
-After first publish, users can install from GitHub Pages:
-
-```bash
-curl -fsSL "https://<owner>.github.io/<repo>/lin-dos-archive-keyring.asc" | gpg --dearmor | sudo tee /usr/share/keyrings/lin-dos-archive-keyring.gpg >/dev/null
-echo "deb [signed-by=/usr/share/keyrings/lin-dos-archive-keyring.gpg] https://<owner>.github.io/<repo>/ stable main" | sudo tee /etc/apt/sources.list.d/lin-dos.list
-sudo apt update
-sudo apt install lin-dos
+source ~/.bashrc
 ```
 
 ## Join the Party!

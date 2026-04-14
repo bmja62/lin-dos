@@ -2,17 +2,18 @@
 
 # Load LIN-DOS command functions for interactive shells.
 if [[ -n "${BASH_VERSION:-}" ]]; then
-    if [[ -d "./commands" ]]; then
-        source ./commands/cd/cd.sh
-        source ./commands/cls/cls.sh
-        source ./commands/copy/copy.sh
-        source ./commands/date/date.sh
-        source ./commands/md/md.sh
-        source ./commands/rd/rd.sh
-        source ./commands/time/time.sh
-        source ./commands/tree/tree.sh
-        source ./commands/type/type.sh
-        source ./commands/ver/ver.sh
+    local_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+    if [[ -f "${local_root}/cd/cd.sh" ]]; then
+        source "${local_root}/cd/cd.sh"
+        source "${local_root}/cls/cls.sh"
+        source "${local_root}/copy/copy.sh"
+        source "${local_root}/date/date.sh"
+        source "${local_root}/md/md.sh"
+        source "${local_root}/rd/rd.sh"
+        source "${local_root}/time/time.sh"
+        source "${local_root}/tree/tree.sh"
+        source "${local_root}/type/type.sh"
+        source "${local_root}/ver/ver.sh"
     else
         source /usr/lib/lin-dos/cd/cd.sh
         source /usr/lib/lin-dos/cls/cls.sh
