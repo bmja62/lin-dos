@@ -25,6 +25,8 @@ The current implementation is focused on supporting **Windows CMD functionality 
 | `type`              | Display contents of a file       | Partial            |
 | `md`                | Make directory                   | Partial            |
 | `cd`                | Change directory / print cwd     | Partial            |
+| `date`              | Display current date             | Partial            |
+| `time`              | Display current time             | Partial            |
 
 
 
