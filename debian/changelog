@@ -1,0 +1,6 @@
+lin-dos (0.1.0-1) unstable; urgency=medium
+
+  * Initial Debian packaging for APT distribution.
+  * Install LIN-DOS shell functions via /etc/profile.d/lin-dos.sh.
+
+ -- LIN-DOS Maintainers <maintainers@example.com>  Tue, 14 Apr 2026 23:15:00 +0000

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-source ./md/md.sh
+source ./commands/md/md.sh
 
 echo "MD test placeholder."

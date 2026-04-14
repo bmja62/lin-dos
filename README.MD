@@ -31,19 +31,26 @@ The current implementation is focused on supporting **Windows CMD functionality 
 
 
 
-## Get Started in No Time!
+## Installation (APT/Debian Package)
 
-Ready to dive in? Here’s how to get LIN-DOS up and running:
+LIN-DOS is now packaged for Debian/Ubuntu systems.
+
+Build a `.deb` package from source:
 
 ```bash
-tfolder=~/src/bmja62/lin-dos/
-mkdir -p $tfolder
-git clone git@github.com:bmja62/lin-dos.git $tfolder || echo
-cd $tfolder
-./SETUP.EXE
+sudo apt update
+sudo apt install -y build-essential devscripts debhelper
+dpkg-buildpackage -us -uc
 ```
 
-That’s it! You’re ready to rock and roll with your new, familiar commands.
+Install the generated package:
+
+```bash
+sudo apt install ../lin-dos_0.1.0-1_all.deb
+```
+
+After installation, open a new shell session (or run `source /etc/profile.d/lin-dos.sh`)
+to load LIN-DOS commands.
 
 ## Join the Party!
 
