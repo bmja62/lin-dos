@@ -1,0 +1,11 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/main/.schema/devbox.schema.json",
+  "packages": [],
+  "shell": {
+    "scripts": {
+      "test": [
+        "bash -lc 'set -euo pipefail; ran=0; for test_file in ./*/*-test.sh; do if [ -s \"$test_file\" ]; then echo \"Running $test_file\"; bash \"$test_file\"; ran=1; fi; done; if [ \"$ran\" -eq 0 ]; then echo \"No non-empty test files found.\"; exit 1; fi'"
+      ]
+    }
+  }
+}

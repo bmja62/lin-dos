@@ -3,12 +3,13 @@ echo "Starting LIN-DOS..."
 echo 
 echo 
 
-source ./commands/cd.sh
-source ./commands/cls.sh
-source ./commands/copy.sh
-source ./commands/date.sh
-source ./commands/md.sh
-source ./commands/rd.sh
-source ./commands/time.sh
-source ./commands/tree.sh
-source ./commands/ver.sh
+source ./cd/cd.sh
+source ./cls/cls.sh
+source ./copy/copy.sh
+source ./date/date.sh
+source ./md/md.sh
+source ./rd/rd.sh
+source ./time/time.sh
+source ./tree/tree.sh
+source ./ver/ver.sh
+source ./type/type.sh
