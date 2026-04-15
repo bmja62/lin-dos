@@ -42,4 +42,7 @@ interactive_output="$(printf '\n' | DATE)"
 assert_contains "$interactive_output" "The current date is: " "DATE default prints DOS-style current date label"
 assert_contains "$interactive_output" "Enter the new date: (mm-dd-yy)" "DATE default prints DOS-style date prompt"
 
+invalid_output="$(DATE "bad" 2>&1 || true)"
+assert_contains "$invalid_output" "The syntax of the command is incorrect." "DATE rejects unknown arguments"
+
 echo "DATE test passed."

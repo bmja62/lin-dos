@@ -42,4 +42,7 @@ interactive_output="$(printf '\n' | TIME)"
 assert_contains "$interactive_output" "The current time is: " "TIME default prints DOS-style current time label"
 assert_contains "$interactive_output" "Enter the new time:" "TIME default prints DOS-style time prompt"
 
+invalid_output="$(TIME "bad" 2>&1 || true)"
+assert_contains "$invalid_output" "The syntax of the command is incorrect." "TIME rejects unknown arguments"
+
 echo "TIME test passed."
