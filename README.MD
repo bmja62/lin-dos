@@ -11,9 +11,13 @@ That’s what switching from Windows to Linux can feel like. Scary, right? LIN-D
 
 This repo is just getting started, and we plan to keep adding more commands and features gradually.
 It's a work in progress, and the goal is to make it as comprehensive and helpful as possible. Stay tuned for updates and feel free to contribute your expertise!
+
+## What we support
+
 The current implementation is focused on supporting **Windows CMD functionality on Ubuntu**.
 
-## 🧾 Available Commands
+## Available Commands
+
 
 | **Windows Command** | **What It Does**                 | **Implementation** |
 | ------------------- | -------------------------------- | ------------------ |
@@ -27,8 +31,6 @@ The current implementation is focused on supporting **Windows CMD functionality 
 | `cd`                | Change directory / print cwd     | Partial            |
 | `date`              | Display current date             | Partial            |
 | `time`              | Display current time             | Partial            |
-
-
 
 
 ## Installation
@@ -52,8 +54,8 @@ source ~/.bashrc
 
 Got an idea? A brilliant command translation that we missed? Jump in!
 
-* **Fork it**: Got a fix or a feature? Fork the repo, dive in, and hit us up with that pull request.
-* **Issue Tracker**: Found a bug? Got a suggestion? Drop it like it’s hot in our issue tracker.
+- **Fork it**: Got a fix or a feature? Fork the repo, dive in, and hit us up with that pull request.
+- **Issue Tracker**: Found a bug? Got a suggestion? Drop it like it’s hot in our issue tracker.
 
 ## License
 
@@ -61,5 +63,6 @@ Feel free to use and spread LIN-DOS as you like! It’s all yours under the MIT 
 
 ## Shoutouts
 
-* Big thanks to all the brave souls switching from Windows to Linux. We salute you!
-* Shoutout to the open-source community, couldn’t do it without you!
+- Big thanks to all the brave souls switching from Windows to Linux. We salute you!
+- Shoutout to the open-source community, couldn’t do it without you!
+
