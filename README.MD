@@ -36,7 +36,7 @@ The current implementation is focused on supporting **Windows CMD functionality 
 Install LIN-DOS with one command:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/bmja62/lin-dos/main/setup.exe | bash
+curl -fsSL https://raw.githubusercontent.com/bmja62/lin-dos/main/src/setup.exe | bash
 ```
 
 This installer downloads the latest source, installs it under

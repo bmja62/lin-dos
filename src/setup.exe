@@ -16,7 +16,8 @@ echo "Downloading LIN-DOS from ${ARCHIVE_URL}"
 curl -fsSL "${ARCHIVE_URL}" | tar -xz -C "${TMP_DIR}"
 
 SRC_DIR="${TMP_DIR}/$(basename "${REPO_SLUG}")-${BRANCH}"
-if [[ ! -d "${SRC_DIR}" ]]; then
+SRC_BASE="${SRC_DIR}/src"
+if [[ ! -d "${SRC_BASE}" ]]; then
     echo "Failed to locate extracted LIN-DOS source."
     exit 1
 fi
@@ -24,11 +25,17 @@ fi
 mkdir -p "${INSTALL_DIR}"
 for dir in cd cls copy date md rd time tree type ver; do
     rm -rf "${INSTALL_DIR}/${dir}"
-    cp -R "${SRC_DIR}/${dir}" "${INSTALL_DIR}/${dir}"
+    cp -R "${SRC_BASE}/${dir}" "${INSTALL_DIR}/${dir}"
 done
 
-for file in README.MD LICENSE command.com; do
-    cp "${SRC_DIR}/${file}" "${INSTALL_DIR}/${file}"
+for file in command.com; do
+    cp "${SRC_BASE}/${file}" "${INSTALL_DIR}/${file}"
+done
+
+for file in README.MD readme.md LICENSE license; do
+    if [[ -f "${SRC_DIR}/${file}" ]]; then
+        cp "${SRC_DIR}/${file}" "${INSTALL_DIR}/${file}"
+    fi
 done
 
 BASHRC_FILE="${HOME}/.bashrc"
