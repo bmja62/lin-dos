@@ -1,10 +1,11 @@
+TYPE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 function TYPE() {
+    local help_file="${TYPE_DIR}/type-help.txt"
+
     if [[ "$1" == "/?" ]]; then
-	    echo "Displays the contents of a text file or files."
-	    echo 
-	    echo "TYPE [path]filename"
-	    echo
-	    return 0
+        cat "$help_file"
+        return 0
     fi
 
     if [ -z "$1" ]; then

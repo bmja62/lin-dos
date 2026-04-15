@@ -30,10 +30,23 @@ assert_contains() {
     fi
 }
 
+assert_equal() {
+    local actual="$1"
+    local expected="$2"
+    local message="$3"
+    if [[ "$actual" == "$expected" ]]; then
+        echo "PASS: $message"
+    else
+        echo "FAIL: $message"
+        echo "Expected: $expected"
+        echo "Actual:   $actual"
+        exit 1
+    fi
+}
+
+expected_help="$(cat ./time/time-help.txt)"
 help_output="$(TIME "/?")"
-assert_contains "$help_output" "Displays or sets the system time." "TIME help starts with DOS description"
-assert_contains "$help_output" "TIME [/T | time]" "TIME help includes DOS syntax"
-assert_contains "$help_output" "current time, without prompting for a new time." "TIME help includes /T behavior"
+assert_equal "$help_output" "$expected_help" "TIME /? matches time-help.txt"
 
 time_output="$(TIME "/T")"
 assert_match "$time_output" "^[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{2}$" "TIME /T returns expected format"

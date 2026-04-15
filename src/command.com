@@ -8,6 +8,7 @@ if [[ -n "${BASH_VERSION:-}" ]]; then
         source "${local_root}/cls/cls.sh"
         source "${local_root}/copy/copy.sh"
         source "${local_root}/date/date.sh"
+        source "${local_root}/help/help.sh"
         source "${local_root}/md/md.sh"
         source "${local_root}/rd/rd.sh"
         source "${local_root}/time/time.sh"
@@ -19,6 +20,7 @@ if [[ -n "${BASH_VERSION:-}" ]]; then
         source /usr/lib/lin-dos/cls/cls.sh
         source /usr/lib/lin-dos/copy/copy.sh
         source /usr/lib/lin-dos/date/date.sh
+        source /usr/lib/lin-dos/help/help.sh
         source /usr/lib/lin-dos/md/md.sh
         source /usr/lib/lin-dos/rd/rd.sh
         source /usr/lib/lin-dos/time/time.sh

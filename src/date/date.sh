@@ -1,15 +1,10 @@
+DATE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 function DATE() {
+    local help_file="${DATE_DIR}/date-help.txt"
+
     if [[ "$1" == "/?" ]]; then
-        echo "Displays or sets the date."
-        echo
-        echo "DATE [/T | date]"
-        echo
-        echo "Type DATE without parameters to display the current date setting and"
-        echo "a prompt for a new one.  Press ENTER to keep the same date."
-        echo
-        echo "If Command Extensions are enabled the DATE command supports"
-        echo "the /T switch which tells the command to just output the"
-        echo "current date, without prompting for a new date."
+        cat "$help_file"
         return 0
     fi
 

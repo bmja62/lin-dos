@@ -23,7 +23,7 @@ if [[ ! -d "${SRC_BASE}" ]]; then
 fi
 
 mkdir -p "${INSTALL_DIR}"
-for dir in cd cls copy date md rd time tree type ver; do
+for dir in cd cls copy date help md rd time tree type ver; do
     rm -rf "${INSTALL_DIR}/${dir}"
     cp -R "${SRC_BASE}/${dir}" "${INSTALL_DIR}/${dir}"
 done

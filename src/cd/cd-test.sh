@@ -16,6 +16,10 @@ assert_equal() {
     fi
 }
 
+expected_help="$(cat ./cd/cd-help.txt)"
+help_output="$(CD "/?")"
+assert_equal "$help_output" "$expected_help" "CD /? matches cd-help.txt"
+
 orig_dir="$(pwd)"
 tmp_dir="$(mktemp -d)"
 mkdir -p "${tmp_dir}/child"

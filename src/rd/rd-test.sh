@@ -15,6 +15,24 @@ assert_contains() {
     fi
 }
 
+assert_equal() {
+    local actual="$1"
+    local expected="$2"
+    local message="$3"
+    if [[ "$actual" == "$expected" ]]; then
+        echo "PASS: $message"
+    else
+        echo "FAIL: $message"
+        echo "Expected: $expected"
+        echo "Actual:   $actual"
+        exit 1
+    fi
+}
+
+expected_help="$(cat ./rd/rd-help.txt)"
+help_output="$(RD "/?")"
+assert_equal "$help_output" "$expected_help" "RD /? matches rd-help.txt"
+
 tmp_dir="$(mktemp -d)"
 orig_dir="$(pwd)"
 builtin cd "$tmp_dir"

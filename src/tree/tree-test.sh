@@ -15,6 +15,24 @@ assert_contains() {
     fi
 }
 
+assert_equal() {
+    local actual="$1"
+    local expected="$2"
+    local message="$3"
+    if [[ "$actual" == "$expected" ]]; then
+        echo "PASS: $message"
+    else
+        echo "FAIL: $message"
+        echo "Expected: $expected"
+        echo "Actual:   $actual"
+        exit 1
+    fi
+}
+
+expected_help="$(cat ./tree/tree-help.txt)"
+help_output="$(TREE "/?")"
+assert_equal "$help_output" "$expected_help" "TREE /? matches tree-help.txt"
+
 tmp_dir="$(mktemp -d)"
 tmp_name="$(basename "$tmp_dir")"
 mkdir -p "${tmp_dir}/sub/nested"

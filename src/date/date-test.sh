@@ -30,10 +30,23 @@ assert_contains() {
     fi
 }
 
+assert_equal() {
+    local actual="$1"
+    local expected="$2"
+    local message="$3"
+    if [[ "$actual" == "$expected" ]]; then
+        echo "PASS: $message"
+    else
+        echo "FAIL: $message"
+        echo "Expected: $expected"
+        echo "Actual:   $actual"
+        exit 1
+    fi
+}
+
+expected_help="$(cat ./date/date-help.txt)"
 help_output="$(DATE "/?")"
-assert_contains "$help_output" "Displays or sets the date." "DATE help starts with DOS description"
-assert_contains "$help_output" "DATE [/T | date]" "DATE help includes DOS syntax"
-assert_contains "$help_output" "current date, without prompting for a new date." "DATE help includes /T behavior"
+assert_equal "$help_output" "$expected_help" "DATE /? matches date-help.txt"
 
 date_output="$(DATE "/T")"
 assert_match "$date_output" "^[A-Za-z]{3}[[:space:]][0-9]{2}/[0-9]{2}/[0-9]{4}$" "DATE /T returns expected format"

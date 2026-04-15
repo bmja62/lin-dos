@@ -31,6 +31,24 @@ assert_file_equals() {
     fi
 }
 
+assert_equal() {
+    local actual="$1"
+    local expected="$2"
+    local message="$3"
+    if [[ "$actual" == "$expected" ]]; then
+        echo "PASS: $message"
+    else
+        echo "FAIL: $message"
+        echo "Expected: $expected"
+        echo "Actual:   $actual"
+        exit 1
+    fi
+}
+
+expected_help="$(cat ./copy/copy-help.txt)"
+help_output="$(COPY "/?")"
+assert_equal "$help_output" "$expected_help" "COPY /? matches copy-help.txt"
+
 tmp_dir="$(mktemp -d)"
 orig_dir="$(pwd)"
 builtin cd "$tmp_dir"

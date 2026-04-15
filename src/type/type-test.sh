@@ -15,9 +15,23 @@ assert_contains() {
     fi
 }
 
+assert_equal() {
+    local actual="$1"
+    local expected="$2"
+    local message="$3"
+    if [[ "$actual" == "$expected" ]]; then
+        echo "PASS: $message"
+    else
+        echo "FAIL: $message"
+        echo "Expected: $expected"
+        echo "Actual:   $actual"
+        exit 1
+    fi
+}
+
+expected_help="$(cat ./type/type-help.txt)"
 help_output="$(TYPE "/?")"
-assert_contains "$help_output" "Displays the contents of a text file or files." "TYPE help describes behavior"
-assert_contains "$help_output" "TYPE [path]filename" "TYPE help includes syntax"
+assert_equal "$help_output" "$expected_help" "TYPE /? matches type-help.txt"
 
 no_arg_output="$(TYPE 2>&1 || true)"
 assert_contains "$no_arg_output" "The syntax of the command is incorrect." "TYPE without args returns syntax error"

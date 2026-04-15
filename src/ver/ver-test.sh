@@ -15,9 +15,23 @@ assert_contains() {
     fi
 }
 
+assert_equal() {
+    local actual="$1"
+    local expected="$2"
+    local message="$3"
+    if [[ "$actual" == "$expected" ]]; then
+        echo "PASS: $message"
+    else
+        echo "FAIL: $message"
+        echo "Expected: $expected"
+        echo "Actual:   $actual"
+        exit 1
+    fi
+}
+
+expected_help="$(cat ./ver/ver-help.txt)"
 help_output="$(VER "/?")"
-assert_contains "$help_output" "Displays the Linux version." "VER help describes behavior"
-assert_contains "$help_output" "VER" "VER help includes syntax"
+assert_equal "$help_output" "$expected_help" "VER /? matches ver-help.txt"
 
 expected_pretty="$(grep '^PRETTY_NAME=' /etc/os-release | cut -d= -f2 | tr -d '"')"
 ver_output="$(VER)"

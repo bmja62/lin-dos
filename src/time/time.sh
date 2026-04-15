@@ -1,15 +1,10 @@
+TIME_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 function TIME() {
+    local help_file="${TIME_DIR}/time-help.txt"
+
     if [[ "$1" == "/?" ]]; then
-        echo "Displays or sets the system time."
-        echo
-        echo "TIME [/T | time]"
-        echo
-        echo "Type TIME with no parameters to display the current time setting and a prompt"
-        echo "for a new one.  Press ENTER to keep the same time."
-        echo
-        echo "If Command Extensions are enabled the TIME command supports"
-        echo "the /T switch which tells the command to just output the"
-        echo "current time, without prompting for a new time."
+        cat "$help_file"
         return 0
     fi
 
