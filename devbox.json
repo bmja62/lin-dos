@@ -5,7 +5,7 @@
     "scripts": {
       "run": [
         "set -euo pipefail",
-        "source ./packaging/lin-dos.sh",
+        "source ./command.com",
         "echo \"LIN-DOS commands loaded for local testing.\"",
         "exec bash"
       ],

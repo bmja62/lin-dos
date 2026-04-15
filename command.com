@@ -2,7 +2,7 @@
 
 # Load LIN-DOS command functions for interactive shells.
 if [[ -n "${BASH_VERSION:-}" ]]; then
-    local_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+    local_root="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
     if [[ -f "${local_root}/cd/cd.sh" ]]; then
         source "${local_root}/cd/cd.sh"
         source "${local_root}/cls/cls.sh"

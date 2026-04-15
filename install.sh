@@ -22,17 +22,17 @@ if [[ ! -d "${SRC_DIR}" ]]; then
 fi
 
 mkdir -p "${INSTALL_DIR}"
-for dir in cd cls copy date md rd time tree type ver packaging; do
+for dir in cd cls copy date md rd time tree type ver; do
     rm -rf "${INSTALL_DIR}/${dir}"
     cp -R "${SRC_DIR}/${dir}" "${INSTALL_DIR}/${dir}"
 done
 
-for file in README.MD LICENSE; do
+for file in README.MD LICENSE command.com; do
     cp "${SRC_DIR}/${file}" "${INSTALL_DIR}/${file}"
 done
 
 BASHRC_FILE="${HOME}/.bashrc"
-SOURCE_LINE="source \"${INSTALL_DIR}/packaging/lin-dos.sh\""
+SOURCE_LINE="source \"${INSTALL_DIR}/command.com\""
 if [[ -f "${BASHRC_FILE}" ]] && grep -Fq "${SOURCE_LINE}" "${BASHRC_FILE}"; then
     echo "LIN-DOS is already configured in ${BASHRC_FILE}"
 else
