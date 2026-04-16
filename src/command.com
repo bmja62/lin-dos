@@ -21,4 +21,10 @@ source "${_LIN_DOS_ROOT}/tree/tree.sh"
 source "${_LIN_DOS_ROOT}/type/type.sh"
 source "${_LIN_DOS_ROOT}/ver/ver.sh"
 
+echo
+echo "Use LIN-DOS commands in CAPITAL letters (for example HELP, CLS, VER)."
+echo "That way they do not collide with Linux tools that use the same spelling"
+echo "(cd, type, date, time, etc.): CAPS means LIN-DOS, lowercase stays Linux."
+echo
+
 unset _LIN_DOS_ROOT
