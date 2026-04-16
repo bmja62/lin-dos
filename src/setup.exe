@@ -28,7 +28,7 @@ for dir in cd cls copy date help md rd time tree type ver; do
     cp -R "${SRC_BASE}/${dir}" "${INSTALL_DIR}/${dir}"
 done
 
-for file in command.com; do
+for file in command.com lindos.sh; do
     cp "${SRC_BASE}/${file}" "${INSTALL_DIR}/${file}"
 done
 
@@ -39,16 +39,16 @@ for file in README.MD readme.md LICENSE license; do
 done
 
 BASHRC_FILE="${HOME}/.bashrc"
-LIN_DOS_MARKER="# LIN-DOS (lindos alias)"
-ALIAS_LINE="alias lindos='source \"${INSTALL_DIR}/command.com\"'"
+LIN_DOS_MARKER="# LIN-DOS (lindos command)"
+INIT_LINE="[[ -f \"${INSTALL_DIR}/lindos.sh\" ]] && source \"${INSTALL_DIR}/lindos.sh\""
 if [[ -f "${BASHRC_FILE}" ]] && grep -Fq "${LIN_DOS_MARKER}" "${BASHRC_FILE}"; then
     echo "LIN-DOS is already configured in ${BASHRC_FILE}"
 else
     echo "" >> "${BASHRC_FILE}"
     echo "${LIN_DOS_MARKER}" >> "${BASHRC_FILE}"
-    echo "${ALIAS_LINE}" >> "${BASHRC_FILE}"
-    echo "Added lindos alias to ${BASHRC_FILE}"
+    echo "${INIT_LINE}" >> "${BASHRC_FILE}"
+    echo "Added lindos command to ${BASHRC_FILE}"
 fi
 
 echo "LIN-DOS installed at ${INSTALL_DIR}"
-echo "Run: source \"${BASHRC_FILE}\"  # then start LIN-DOS with: lindos"
+echo "Run: source \"${BASHRC_FILE}\"  # then: lindos (load) or lindos update (latest)"
