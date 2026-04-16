@@ -1,0 +1,55 @@
+C:\>tree /?
+Graphically displays the folder structure of a drive or path.
+
+TREE [drive:][path] [/F] [/A]
+
+   /F   Display the names of the files in each folder.
+   /A   Use ASCII instead of extended characters.
+
+C:\>cd testfolder
+
+C:\testfolder>tree
+Folder PATH listing for volume Windows
+Volume serial number is 0AE2-ACB6
+C:.
+└───bb
+
+C:\testfolder>cd..
+
+C:\>tree testfolder
+Folder PATH listing for volume Windows
+Volume serial number is 0AE2-ACB6
+C:\TESTFOLDER
+└───bb
+
+C:\>tree testfolder /A
+Folder PATH listing for volume Windows
+Volume serial number is 0AE2-ACB6
+C:\TESTFOLDER
+\---bb
+
+C:\>tree testfolder /F
+Folder PATH listing for volume Windows
+Volume serial number is 0AE2-ACB6
+C:\TESTFOLDER
+│   a.txt
+│   b.txt
+│
+└───bb
+        c.txt
+        d.txt
+
+
+C:\>tree testfolder /F /A
+Folder PATH listing for volume Windows
+Volume serial number is 0AE2-ACB6
+C:\TESTFOLDER
+|   a.txt
+|   b.txt
+|
+\---bb
+        c.txt
+        d.txt
+
+
+C:\>

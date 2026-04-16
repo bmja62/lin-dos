@@ -1,0 +1,30 @@
+C:\>type /?
+Displays the contents of a text file or files.
+
+TYPE [drive:][path]filename
+
+C:\>type
+The syntax of the command is incorrect.
+
+C:\>type testfolder\a.txt
+this is the a.txt file content. first line
+this is the a.txt file content. line 2
+this is the a.txt file content. line 3
+this is the a.txt file content. last line
+C:\>type testfolder\a.txt testfolder\b.txt
+
+testfolder\a.txt
+
+
+this is the a.txt file content. first line
+this is the a.txt file content. line 2
+this is the a.txt file content. line 3
+this is the a.txt file content. last line
+testfolder\b.txt
+
+
+this is the b.txt file content. first line
+this is the b.txt file content. line 2
+this is the b.txt file content. line 3
+this is the b.txt file content. last line
+C:\>

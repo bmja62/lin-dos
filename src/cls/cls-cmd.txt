@@ -1,0 +1,7 @@
+
+C:\>cls /?
+Clears the screen.
+
+CLS
+
+C:\>

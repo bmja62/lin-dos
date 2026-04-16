@@ -1,0 +1,10 @@
+C:\>ver /?
+Displays the Windows version.
+
+VER
+
+C:\>ver
+
+Microsoft Windows [Version 10.0.26200.8037]
+
+C:\>
