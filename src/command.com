@@ -6,6 +6,9 @@ echo "Starting LIN-DOS..."
 echo 
 echo 
 
+# DOS-style prompt; use \\ so bash prompt expansion still shows one backslash
+PS1='c:\\> '
+
 source "${_LIN_DOS_ROOT}/cd/cd.sh"
 source "${_LIN_DOS_ROOT}/cls/cls.sh"
 source "${_LIN_DOS_ROOT}/copy/copy.sh"
