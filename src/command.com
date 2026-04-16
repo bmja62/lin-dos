@@ -1,13 +1,21 @@
 #!/usr/bin/env bash
+_LIN_DOS_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-source ./cd/cd.sh
-source ./cls/cls.sh
-source ./copy/copy.sh
-source ./date/date.sh
-source ./help/help.sh
-source ./md/md.sh
-source ./rd/rd.sh
-source ./time/time.sh
-source ./tree/tree.sh
-source ./type/type.sh
-source ./ver/ver.sh
+echo
+echo "Starting LIN-DOS..."
+echo 
+echo 
+
+source "${_LIN_DOS_ROOT}/cd/cd.sh"
+source "${_LIN_DOS_ROOT}/cls/cls.sh"
+source "${_LIN_DOS_ROOT}/copy/copy.sh"
+source "${_LIN_DOS_ROOT}/date/date.sh"
+source "${_LIN_DOS_ROOT}/help/help.sh"
+source "${_LIN_DOS_ROOT}/md/md.sh"
+source "${_LIN_DOS_ROOT}/rd/rd.sh"
+source "${_LIN_DOS_ROOT}/time/time.sh"
+source "${_LIN_DOS_ROOT}/tree/tree.sh"
+source "${_LIN_DOS_ROOT}/type/type.sh"
+source "${_LIN_DOS_ROOT}/ver/ver.sh"
+
+unset _LIN_DOS_ROOT
