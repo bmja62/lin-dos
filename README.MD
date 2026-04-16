@@ -41,14 +41,32 @@ Install LIN-DOS with one command:
 curl -fsSL https://raw.githubusercontent.com/bmja62/lin-dos/main/src/setup.exe | bash
 ```
 
-This installer downloads the latest source, installs it under
-`~/.local/share/lin-dos`, and appends the LIN-DOS loader to `~/.bashrc`.
+The installer downloads the latest source, copies it to `~/.local/share/lin-dos`
+(or to the directory in `LIN_DOS_HOME` if you set that), and adds a short block
+to `~/.bashrc` that **sources `lindos.sh`**. That defines the **`lindos`**
+command in new Bash sessions. LIN-DOS commands are **not** loaded automatically;
+you run `lindos` when you want them in the current shell.
 
-Then load commands in your current shell:
+After installing (or opening a new terminal), pick up the change:
 
 ```bash
 source ~/.bashrc
 ```
+
+## Using LIN-DOS
+
+| Command | What it does |
+| ------- | ------------ |
+| `lindos` | Load LIN-DOS commands (Windows-style helpers) into **this** shell. |
+| `lindos update` | Re-run the installer from GitHub for the latest files, then reload commands in this shell. |
+| `lindos help` | Show brief usage. |
+
+**Optional environment variables** (for installs and updates):
+
+- `LIN_DOS_HOME` — install directory (default: `~/.local/share/lin-dos`).
+- `LIN_DOS_REPO` — GitHub repo slug, `owner/name` (default: `bmja62/lin-dos`).
+- `LIN_DOS_BRANCH` — branch to install from (default: `main`).
+- `LIN_DOS_SETUP_URL` — full URL to `setup.exe`; when set, it overrides the default raw GitHub URL built from repo and branch.
 
 ## Join the Party!
 
