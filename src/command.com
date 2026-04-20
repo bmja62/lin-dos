@@ -13,8 +13,8 @@ source "${_LIN_DOS_ROOT}/type/type.sh"
 source "${_LIN_DOS_ROOT}/ver/ver.sh"
 unset _LIN_DOS_ROOT
 
-# DOS-style prompt; use \\ so bash prompt expansion still shows one backslash
-PS1='C:\\> '
+# Prompt like c:/home/user/> ($PWD expands each time; Unix paths already use /)
+PS1='c:${PWD}/> '
 
 echo
 echo "Use LIN-DOS commands in CAPITAL letters (for example HELP, CLS, VER)."
